@@ -1,5 +1,6 @@
 package com.intellectualProperty.db.dao.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.logging.Logger;
@@ -43,26 +44,15 @@ public class UserDaoImplTest {
 	public void setUp() throws Exception {
 
 	}
-
-	@Test
-	public void dbManagerClassesInitializedTest() {
-		
-		assertNotNull(trademarkDaoImpl);
-		assertNotNull(dataSource);
-		assertNotNull(sessionFactory);
-	}
 	
 	@Test
 	public void findByIdTest() {
-		
 		IPUser savedUser = userDaoImpl.findIPUserById(1);
-		
-		logger.info(savedUser + "Found user in the database");
+		logger.info(savedUser.toString());
+		assertNotNull(savedUser);
+		assertEquals("Tester", savedUser.getLastName());
+		assertEquals("test@tester.com", savedUser.getEmail());
 	}
-
-
-
-
 
 }
 

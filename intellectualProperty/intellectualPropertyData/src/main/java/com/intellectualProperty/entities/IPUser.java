@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import net.bytebuddy.asm.Advice.This;
+
 /**
  * @author user
  *
@@ -41,13 +43,9 @@ public class IPUser {
 	@Column(name = "phone")
 	private String phoneNumber;
 	
-	public IPUser() {
-		
-	}
+	public IPUser() {}
 
-	public IPUser(String firstName, String lastName, String email, String nationality, String password,
-			String phoneNumber) {
-	
+	public IPUser(String firstName, String lastName, String email, String nationality, String password, String phoneNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -114,8 +112,21 @@ public class IPUser {
 
 	@Override
 	public String toString() {
-		return "IPUser [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", nationality=" + nationality + ", password=" + password + ", phoneNumber=" + phoneNumber + "]";
+		StringBuilder stringRep = new StringBuilder("IPUser [id=");
+		stringRep.append(this.getId());
+		stringRep.append(", firstName=");
+		stringRep.append(this.getFirstName());
+		stringRep.append(", lastName=");
+		stringRep.append(this.getLastName());
+		stringRep.append(", email=");
+		stringRep.append(this.getEmail());
+		stringRep.append(", nationality=");
+		stringRep.append(this.getNationality());
+		stringRep.append(", phoneNumber=");
+		stringRep.append(this.getPhoneNumber());
+		stringRep.append("]");
+		
+		return stringRep.toString();
 	}
 	
 
