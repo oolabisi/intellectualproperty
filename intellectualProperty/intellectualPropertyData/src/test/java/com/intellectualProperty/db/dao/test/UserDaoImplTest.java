@@ -15,7 +15,9 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.intellectualProperty.entities.IPUser;
+import com.intellectualProperty.entities.UserCompany;
 import com.intellectualProperty.entities.dao.TradeMarkDao;
+import com.intellectualProperty.entities.dao.UserCompanyDAO;
 import com.intellectualProperty.entities.dao.UserDAO;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
@@ -38,6 +40,8 @@ public class UserDaoImplTest {
 
 	@Autowired
 	private UserDAO userDaoImpl;
+	
+	private UserCompanyDAO userCompanyDaoimpl;
 
 
 	@Before
@@ -52,13 +56,23 @@ public class UserDaoImplTest {
 		assertNotNull(savedUser);
 		assertEquals("Tester", savedUser.getLastName());
 		assertEquals("test@tester.com", savedUser.getEmail());
+		assertNotNull(savedUser.getUsercompanies());
+		
+		
 	}
+	
+	
+//	@Test
+//	public void findUserCompanyById() {
+//		UserCompany savedCompanyUser = userCompanyDaoimpl.findcompanyuserById(1);
+//		logger.info(savedCompanyUser.toString());
+//		assertNotNull(savedCompanyUser);
+//
+//}
+
+
 
 }
-
-
-
-
 	
 	
 

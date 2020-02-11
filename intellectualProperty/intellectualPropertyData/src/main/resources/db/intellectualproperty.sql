@@ -44,7 +44,11 @@ CREATE TABLE IF NOT EXISTS `intellectualproperty`.`usercompany` (
   `address` VARCHAR(100) NULL DEFAULT NULL,
   `email` VARCHAR(40) NULL DEFAULT NULL,
   `phone` VARCHAR(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`usercompanyid`))
+  `ip_userid` INT(11) NOT NULL,
+  PRIMARY KEY (`usercompanyid`),
+  CONSTRAINT `FK_IP_USER_ID`
+	  FOREIGN KEY(`ip_userid`)
+	  REFERENCES `intellectualproperty`.`ipusers` (`userid`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
