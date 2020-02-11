@@ -21,8 +21,8 @@
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/intellectualpropertydb?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true" />
-        <property name="user" value="ip" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/intellectualproperty?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true" />
+        <property name="user" value="ip"/>
         <property name="password" value="@Bonsay12345" /> 
 
         <!-- these are connection pool properties for C3P0 -->
@@ -36,7 +36,7 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
-		<property name="packagesToScan" value="com.springdemo" />
+		<property name="packagesToScan" value="com.intellectualProperty" />
 		<property name="hibernateProperties">
 		   <props>
 		      <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>

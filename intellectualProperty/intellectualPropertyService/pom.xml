@@ -7,4 +7,20 @@
   </parent>
   <artifactId>intellectualPropertyService</artifactId>
   <name>servicemodule</name>
+  
+
+  <properties>
+	  <maven.compiler.source>12</maven.compiler.source>
+	  <maven.compiler.target>12</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+  
+  <dependency>
+   <groupId>com.intellectualProperty</groupId>
+    <artifactId>intellectualPropertyData</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+  
+  </dependencies>
 </project>
