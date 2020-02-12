@@ -12,30 +12,30 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.intellectualProperty.entities.Agent;
+import com.intellectualProperty.entities.Attorney;
 import com.intellectualProperty.entities.UserCompany;
-import com.intellectualProperty.entities.dao.AgentDao;
+import com.intellectualProperty.entities.dao.AttorneyDao;
 import com.intellectualProperty.entities.dao.UserDAOImpl;
 
 @Sql(scripts= {"classpath:/db/createIPTables.sql"})
 @ContextConfiguration("classpath:/intellectualProperty-data-context.xml")
 @RunWith(SpringRunner.class)
 
-public class AgentDaoImplTest {
+public class AttorneyDaoImplTest {
 	
 	
-	private Logger logger = Logger.getLogger(AgentDaoImplTest.class.getName());
+	private Logger logger = Logger.getLogger(AttorneyDaoImplTest.class.getName());
 	
 	@Autowired
-	private AgentDao agentDaoImpl;
+	private AttorneyDao attorneyDaoImpl;
 
 	@BeforeEach
 	public void setUp() throws Exception {
 	}
 
 	@Test
-	public void findAgentByIdTest() {
-		Agent savedAgents = agentDaoImpl.findAgentById(1);
+	public void findAttorneyByIdTest() {
+		Attorney savedAgents = attorneyDaoImpl.findAttorneyById(1);
 		logger.info(savedAgents.toString());
 		assertNotNull(savedAgents);
 		assertEquals( "malaysia", savedAgents.getNationality());
