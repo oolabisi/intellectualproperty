@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.intellectualProperty.entities.Agent;
+import com.intellectualProperty.entities.Attorney;
 
 
 /**
@@ -18,20 +18,20 @@ import com.intellectualProperty.entities.Agent;
  *
  */
 @Repository
-public class AgentDaoImpl implements AgentDao {
+public class AttorneyDaoImpl implements AttorneyDao {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	
-	private Logger logger = Logger.getLogger(AgentDaoImpl.class.getName());
+	private Logger logger = Logger.getLogger(AttorneyDaoImpl.class.getName());
 
 	@Transactional
-	public Agent findAgentById(int id) {
+	public Attorney findAttorneyById(int id) {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		Agent requestedAgent = currentSession.find(Agent.class, id);
+		Attorney requestedAgent = currentSession.find(Attorney.class, id);
 		
 		return requestedAgent;
 	}

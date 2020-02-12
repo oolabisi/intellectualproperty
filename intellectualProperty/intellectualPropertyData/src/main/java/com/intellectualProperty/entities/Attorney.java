@@ -1,19 +1,24 @@
 package com.intellectualProperty.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "agent")
-public class Agent {
+@Table(name = "attorney")
+public class Attorney {
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int agentid;
+	private int attorneyId;
 	
 	@Column(name= "firstname")
 	private String firstName;
@@ -32,8 +37,13 @@ public class Agent {
 	
 	@Column(name = "phone")
 	private String phoneNumber;
+	
+	
+//	@OneToOne(mappedBy = "agents")
+//	private AgentCompany agentcompanies;
 
-	public Agent() {}
+
+	public Attorney() {}
 
 	public String getFirstName() {
 		return firstName;
@@ -85,18 +95,37 @@ public class Agent {
 	
 	
 	
-	public int getAgentid() {
-		return agentid;
+	public int getAttorneyId() {
+		return attorneyId;
 	}
 
-	public void setAgentid(int agentid) {
-		this.agentid = agentid;
+	public void setAttorneyId(int agentid) {
+		this.attorneyId = agentid;
 	}
+	
+//	
+//public void addAgentCompany(AgentCompany newAgentCompany) {
+//		
+//		if(agentcompanies == null) {
+//			agentcompanies = new ArrayList<>();
+//			
+//		}
+//		agentcompanies.add(newAgentCompany);
+//	}
 
+//	
+//	public AgentCompany getAgentcompanies() {
+//		return agentcompanies;
+//	}
+//
+//	public void setAgentcompanies(AgentCompany agentcompanies) {
+//		this.agentcompanies = agentcompanies;
+//	}
+	
 	@Override
 	public String toString() {
 		StringBuilder stringRep = new StringBuilder("Agent [id=");
-		stringRep.append(this.getAgentid());
+		stringRep.append(this.getAttorneyId());
 		stringRep.append(", firstName=");
 		stringRep.append(this.getFirstName());
 		stringRep.append(", lastName=");
@@ -113,4 +142,6 @@ public class Agent {
 	
 
 	}
+
+	
 }
