@@ -23,7 +23,7 @@
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/intellectualproperty?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true" />
         <property name="user" value="ip"/>
-        <property name="password" value="@Bonsay12345" /> 
+        <property name="password" value="ipUser12345" /> 
 
         <!-- these are connection pool properties for C3P0 -->
 		<property name="initialPoolSize" value="5"/>
@@ -33,8 +33,7 @@
 	</bean>  
 		
 	<!-- Step 2: Setup Hibernate session factory -->
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
 		<property name="packagesToScan" value="com.intellectualProperty" />
 		<property name="hibernateProperties">
@@ -45,12 +44,8 @@
 		</property>
    </bean>
    
-   
- 
-   
     <!-- Step 3: Setup Hibernate transaction manager -->
-	<bean id="myTransactionManager"
-            class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+	<bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
    

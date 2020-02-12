@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 -- -----------------------------------------------------
 DROP SCHEMA IF EXISTS `intellectualproperty` ;
@@ -27,3 +28,16 @@ insert into agent
 values
 (1, "Vincent", "Tester", "test@tester.com", "pass123", "123456789", "malaysia"),
 (2, "Ade", "Adeoye", "ade@adeoye.com", "passwd123", "1256789998", "nigeria");
+=======
+use `intellectualpropertydb` ;
+-- -----------------------------------------------------
+-- Table `intellectualpropertydb`.`usertb`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `A` (
+  `userID` INT(11) NOT NULL AUTO_INCREMENT,
+  `firstName` VARCHAR(20) NOT NULL,
+  `lastName` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (`userID`));
+ 
+>>>>>>> d52efc43ed823ad9b32620d3741d7f7a49360aa1
