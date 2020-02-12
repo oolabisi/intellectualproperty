@@ -12,27 +12,27 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.intellectualProperty.entities.AgentCompany;
-import com.intellectualProperty.entities.dao.AgentCompanyDao;
+import com.intellectualProperty.entities.LegalFirm;
+import com.intellectualProperty.entities.dao.LegalFirmDao;
 
 /**
  * @author Oloko
  *
  */
-@Sql(scripts= {"classpath:/db/agentCompanyTable.sql"})
+@Sql(scripts= {"classpath:/db/legalFirms.sql"})
 @ContextConfiguration("classpath:/intellectualProperty-data-context.xml")
 @RunWith(SpringRunner.class)
-public class AgentCompanyDaoTest {
+public class LegalFirmDaoTest {
 	
 	@Autowired
-	private AgentCompanyDao agentCompanyDaoImpl;
+	private LegalFirmDao legalFirmDaoImpl;
 	
 	@Test
 	public void findUserCompanyByIdTest() {
-		AgentCompany savedAgentComp = agentCompanyDaoImpl.findcompanyById(1);
+		LegalFirm savedAgentComp = legalFirmDaoImpl.findcompanyById(1);
 		
 		assertNotNull(savedAgentComp);
-		assertEquals("45 berkley street", savedAgentComp);
+		assertEquals("45 berkley street", savedAgentComp.getAddress());
 		assertEquals("delano@delanolegal.com", savedAgentComp.getCompanyEmail());
 		
 		

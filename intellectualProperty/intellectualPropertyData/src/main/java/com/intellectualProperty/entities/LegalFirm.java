@@ -1,15 +1,18 @@
 package com.intellectualProperty.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "agentcompany")
-public class AgentCompany {
+public class LegalFirm {
 	
 	@Id
 	@Column(name = "companyid")
@@ -28,13 +31,14 @@ public class AgentCompany {
 	@Column(name = "companyphonenumber")
 	private String companyPhoneNumber;
 	
+	
 
-	public AgentCompany() {
+	public LegalFirm() {
 		
 	  }
 
 
-	public AgentCompany(String companyName, String companyAddress, String companyEmail, String companyPhoneNumber) {
+	public LegalFirm(String companyName, String companyAddress, String companyEmail, String companyPhoneNumber) {
 		this.companyName = companyName;
 		this.companyAddress = companyAddress;
 		this.companyEmail = companyEmail;
