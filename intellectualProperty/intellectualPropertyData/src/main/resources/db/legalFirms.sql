@@ -22,3 +22,11 @@ CREATE TABLE `legalfirms` (
 insert into legalfirms
  values(1, "Delano Partners", "45 berkley street", "2348023223443", "delano@delanolegal.com"),
  (2, "Templars Partners", "5 Gerard road ikoyi", "234895245324", "templars@templar.com");
+
+ 
+ use intellectualproperty;
+create table legalfirmattorneys(
+ 	firmid int references legalfirm(firmid),
+ 	attorneyid int references attorney(attorneyid),
+	primary key (firmid, attorneyid)	
+ )

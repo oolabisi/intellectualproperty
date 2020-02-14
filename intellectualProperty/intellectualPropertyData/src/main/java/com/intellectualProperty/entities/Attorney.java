@@ -38,10 +38,7 @@ public class Attorney {
 	@Column(name = "phone")
 	private String phoneNumber;
 	
-	
-//	@OneToOne(mappedBy = "agents")
-//	private AgentCompany agentcompanies;
-
+			
 
 	public Attorney() {}
 

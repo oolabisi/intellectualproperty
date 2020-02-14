@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.mapping.Set;
+
 @Entity
 @Table(name = "agentcompany")
 public class LegalFirm {
@@ -31,7 +33,8 @@ public class LegalFirm {
 	@Column(name = "companyphonenumber")
 	private String companyPhoneNumber;
 	
-	
+	@OneToMany(mappedBy="legalFirm")
+	private List<Attorney> attorney;
 
 	public LegalFirm() {
 		
