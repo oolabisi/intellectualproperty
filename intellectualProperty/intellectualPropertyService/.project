@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>intellectualPropertyService</name>
@@ -35,7 +34,6 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 	</natures>
 </projectDescription>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>intellectualPropertyService</name>
@@ -72,4 +70,3 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 	</natures>
 </projectDescription>
->>>>>>> 24f29256b4ec97672e169758fe7b21788317bafb
