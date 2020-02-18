@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582018514742_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582018514766_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582018544865_3" label="intellectualProperty" name="intellectualProperty">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/intellectualProperty" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/intellectualPropertyWeb" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/intellectualPropertyService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/intellectualPropertyData" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582018521484_2" label="Window Working Set" name="Aggregate for window 1582018521484"/>
+</workingSetManager>

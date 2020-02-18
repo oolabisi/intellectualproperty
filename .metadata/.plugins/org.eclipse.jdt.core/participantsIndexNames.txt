@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Dev\workspaces\intellectualproperty\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3428066288.index
+\intellectualPropertyWeb\src\main\java
